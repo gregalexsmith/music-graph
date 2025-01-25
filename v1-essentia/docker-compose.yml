@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  classifier:
+    build: .
+    volumes:
+      - ./audio:/app/audio
+      - ./data:/app/data
+    environment:
+      - TZ=UTC  # Set timezone, adjust if needed
+    # restart: unless-stopped 

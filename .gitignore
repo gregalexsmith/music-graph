@@ -1,0 +1,21 @@
+# misc
+.DS_Store
+*.pem
+
+# env files
+.env*
+
+# node
+node_modules
+build
+*.tsbuildinfo
+next-env.d.ts
+
+# other
+*.db
+.notes
+
+# audio
+audio/*
+!audio/*.txt
+
