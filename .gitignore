@@ -13,6 +13,7 @@ next-env.d.ts
 
 # other
 *.db
+*.sqlite3
 .notes
 
 # audio

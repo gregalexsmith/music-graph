@@ -1,0 +1,17 @@
+
+services:
+  music_graph:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=music_graph.settings
+    volumes:
+      - .:/app
+      - model_cache:/root/.cache/huggingface 
+      - ../audio:/app/audio
+
+volumes:
+  model_cache: 
