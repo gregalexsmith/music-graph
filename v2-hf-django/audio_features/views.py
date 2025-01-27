@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 from django.contrib import messages
 from django.views.decorators.http import require_http_methods
-from .models import AudioFile, FeatureExtractorRegistry
-from pathlib import Path
 from django.core.management import call_command
+from pathlib import Path
+from audio_features.models import AudioFile
+from audio_features.extractors import FeatureExtractorRegistry
 
 @require_http_methods(["GET"])
 def audio_list(request):

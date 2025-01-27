@@ -1,7 +1,8 @@
 from transformers import pipeline
-from .models import FeatureExtractor, AudioFile, FeatureExtractorRegistry
-from typing import Dict, Any
 import torch
+from typing import Dict, Any
+from ..models import AudioFile
+from .base import FeatureExtractor, FeatureExtractorRegistry
 
 class MusicGenreExtractor(FeatureExtractor):
     """Feature extractor for music genre classification using HuggingFace's pipeline."""
@@ -36,7 +37,6 @@ class MusicGenreExtractor(FeatureExtractor):
         }
         
         return features
-
 
 # Register the extractor when this module is imported
 FeatureExtractorRegistry.register(MusicGenreExtractor()) 

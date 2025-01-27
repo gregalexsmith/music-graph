@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand
-from audio_features.models import AudioFile, AudioFeatures, FeatureExtractorRegistry
+from audio_features.models import AudioFile, AudioFeatures
+from audio_features.extractors import FeatureExtractorRegistry
 from django.db import transaction
 
 class Command(BaseCommand):
